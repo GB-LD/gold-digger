@@ -1,0 +1,21 @@
+{
+  "name": "gold-digger",
+  "version": "1.0.0",
+  "description": "a little side project for backend skills",
+  "license": "ISC",
+  "author": "GB-LD",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
+    "format": "prettier . --write"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.5.0",
+    "prettier": "3.7.4"
+  }
+}
