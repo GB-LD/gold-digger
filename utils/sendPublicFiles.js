@@ -17,7 +17,7 @@ export async function sendPublicFiles(req, res, dirname) {
     const fileContent = await fs.readFile(filePath);
     sendResponse(res, 200, fileType, fileContent);
   } catch (error) {
-    if (error.type === "ENOENT") {
+    if (error.code === "ENOENT") {
       try {
         const errorContent = await fs.readFile(errorFilePath);
         sendResponse(res, 404, "text/html", errorContent);
