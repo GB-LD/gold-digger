@@ -1,7 +1,6 @@
-import fs from "node:fs/promises";
-import path from "node:path";
 import goldPrices from "../data/goldPrices.js";
-import { sendResponse } from "../utils/sendResponse.js";
+import sendResponse from "../utils/sendResponse.js";
+import parseJSONBody from "../utils/parseJSONBody.js";
 
 export async function handleGoldPrice(res) {
   res.statusCode = 200;
@@ -19,13 +18,14 @@ export async function handleGoldPrice(res) {
   const intervalID = setInterval(sendPrice, 2500);
 
   res.on("close", () => {
-    (clearInterval(intervalID), res.end);
+    clearInterval(intervalID);
   });
 }
 
-export async function handle404(res, dirname) {
-  const publicPath = path.join(dirname, "public");
-  const errorFilePath = path.join(publicPath, "404.html");
-  const errorContent = await fs.readFile(errorFilePath);
-  sendResponse(res, 404, "text/html", errorContent);
+export async function handleInvestRequest(req, res) {
+  const parsedBody = await parseJSONBody(req);
+  if (parsedBody) {
+    sendResponse(res, 201, "application/json", JSON.stringify(parsedBody));
+    console.log("I received an invest", parsedBody);
+  }
 }

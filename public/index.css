@@ -142,6 +142,18 @@ input::placeholder {
   outline: 2px solid #fff;
 }
 
+.invest-btn:disabled {
+  background-color: rgba(
+    255,
+    215,
+    0,
+    0.5
+  ); /* Couleur or (Gold) avec 50% d'opacité */
+  cursor: not-allowed; /* Change le curseur pour indiquer l'interdiction */
+  color: rgba(0, 0, 0, 0.5); /* Rend le texte aussi un peu transparent */
+  border-color: transparent;
+}
+
 .footnote {
   font-size: 10px;
   text-align: center;

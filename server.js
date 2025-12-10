@@ -1,21 +1,30 @@
 import http from "node:http";
 import { sendPublicFiles } from "./utils/sendPublicFiles.js";
-import { handleGoldPrice, handle404 } from "./handler/routeHandlers.js";
+import {
+  handleGoldPrice,
+  handleInvestRequest,
+} from "./handler/routeHandlers.js";
 
 const PORT = 8000;
 const __dirname = import.meta.dirname;
 
-const apiRoutes = {
+const apiRoutesGetReq = {
   "/api/goldprice": handleGoldPrice,
 };
 
-const server = http.createServer(async (req, res) => {
-  if (req.method === "GET" && apiRoutes[req.url]) {
-    return await apiRoutes[req.url](res);
-  }
+const apiRoutesPostReq = {
+  "/api/invest": handleInvestRequest,
+};
 
-  if (req.method === "GET" && req.url.startsWith("/api")) {
-    return await handle404(res, __dirname);
+const server = http.createServer(async (req, res) => {
+  if (req.url.startsWith("/api")) {
+    if (req.method === "GET" && apiRoutesGetReq[req.url]) {
+      return await apiRoutesGetReq[req.url](res);
+    }
+
+    if (req.method === "POST" && apiRoutesPostReq[req.url]) {
+      return await apiRoutesPostReq[req.url](req, res);
+    }
   }
 
   if (req.method === "GET") {

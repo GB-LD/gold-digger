@@ -1,6 +1,6 @@
 import path from "node:path";
 import fs from "node:fs/promises";
-import { sendResponse } from "./sendResponse.js";
+import sendResponse from "./sendResponse.js";
 import { getFileType } from "./getFileType.js";
 
 export async function sendPublicFiles(req, res, dirname) {
