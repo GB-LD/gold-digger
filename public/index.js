@@ -47,7 +47,6 @@ amountInput.addEventListener("input", (e) => {
 // submit invest amount
 investForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-  priceStramPause = true;
   investBtn.disabled = true;
 
   const amount = parseFloat(amountInput.value);
@@ -55,7 +54,6 @@ investForm.addEventListener("submit", async (e) => {
   if (isValidAmount(amount) && actualGoldPrice !== null) {
     try {
       await sendInvest(amount, actualGoldPrice);
-      priceStramPause = false;
       investBtn.disabled = false;
     } catch (error) {
       console.log(error);

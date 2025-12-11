@@ -1,9 +1,7 @@
 import http from "node:http";
 import { sendPublicFiles } from "./utils/sendPublicFiles.js";
-import {
-  handleGoldPrice,
-  handleInvestRequest,
-} from "./handler/routeHandlers.js";
+import handleGoldPrice from "./handlers/handleGoldPrice.js";
+import handleInvestRequest from "./handlers/handleInvestRequest.js";
 
 const PORT = 8000;
 const __dirname = import.meta.dirname;
@@ -32,7 +30,7 @@ const server = http.createServer(async (req, res) => {
   }
 
   res.statusCode = 405;
-  res.end("Methode Not Allowed");
+  res.end("Method Not Allowed");
 });
 
 server.listen(PORT, () => console.log(`server listening on port ${PORT}`));

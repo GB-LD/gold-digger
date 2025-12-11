@@ -15,7 +15,8 @@ export default async function sendInvest(amount, goldPrice) {
       body: JSON.stringify(formData),
     });
     if (response.ok) {
-      console.log("yo bro ! best invest ever", response);
+      const transaction = await response.json();
+      console.log(transaction);
     }
   } catch (error) {
     console.log(error);
