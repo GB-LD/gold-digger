@@ -10,5 +10,83 @@
     "amountPaid": "£ 199",
     "pricePerOz": "£ 105.8272",
     "goldSold": "1.880 oZ"
+  },
+  {
+    "timeStamp": "2025-12-13T08:40:20.122Z",
+    "amountPaid": "£ 1000",
+    "pricePerOz": "£ 104.4904",
+    "goldSold": "9.570 oZ"
+  },
+  {
+    "timeStamp": "2025-12-13T08:53:41.075Z",
+    "amountPaid": "£ 100",
+    "pricePerOz": "£ 105.4175",
+    "goldSold": "0.949 oZ"
+  },
+  {
+    "timeStamp": "2025-12-13T08:56:28.278Z",
+    "amountPaid": "£ 299",
+    "pricePerOz": "£ 101.3934",
+    "goldSold": "2.949 oZ"
+  },
+  {
+    "timeStamp": "2025-12-13T09:02:09.354Z",
+    "amountPaid": "£ 566",
+    "pricePerOz": "£ 103.869",
+    "goldSold": "5.449 oZ"
+  },
+  {
+    "timeStamp": "2025-12-13T09:03:58.688Z",
+    "amountPaid": "£ 89",
+    "pricePerOz": "£ 101.5419",
+    "goldSold": "0.876 oZ"
+  },
+  {
+    "timeStamp": "2025-12-13T09:08:30.161Z",
+    "amountPaid": "£ 99",
+    "pricePerOz": "£ 102.9802",
+    "goldSold": "0.961 oZ"
+  },
+  {
+    "timeStamp": "2025-12-13T09:10:27.321Z",
+    "amountPaid": "£ 7",
+    "pricePerOz": "£ 102.9802",
+    "goldSold": "0.068 oZ"
+  },
+  {
+    "timeStamp": "2025-12-13T09:13:28.482Z",
+    "amountPaid": "£ 0.1",
+    "pricePerOz": "£ 98.8485",
+    "goldSold": "0.001 oZ"
+  },
+  {
+    "timeStamp": "2025-12-13T09:14:46.074Z",
+    "amountPaid": "£ 0.2",
+    "pricePerOz": "£ 104.4904",
+    "goldSold": "0.002 oZ"
+  },
+  {
+    "timeStamp": "2025-12-13T09:14:54.390Z",
+    "amountPaid": "£ 0.3",
+    "pricePerOz": "£ 105.0399",
+    "goldSold": "0.003 oZ"
+  },
+  {
+    "timeStamp": "2025-12-13T09:15:03.020Z",
+    "amountPaid": "£ 600.5",
+    "pricePerOz": "£ 104.4904",
+    "goldSold": "5.747 oZ"
+  },
+  {
+    "timeStamp": "2025-12-13T09:18:19.840Z",
+    "amountPaid": "£ 137",
+    "pricePerOz": "£ 102.9802",
+    "goldSold": "1.330 oZ"
+  },
+  {
+    "timeStamp": "2025-12-13T09:19:07.453Z",
+    "amountPaid": "£ 677",
+    "pricePerOz": "£ 105.0399",
+    "goldSold": "6.445 oZ"
   }
 ]

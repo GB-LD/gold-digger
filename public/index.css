@@ -121,6 +121,12 @@ input::placeholder {
   color: #999;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .invest-btn {
   padding: 0.6em 0.5em;
   background-color: var(--gold);

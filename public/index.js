@@ -55,6 +55,7 @@ investForm.addEventListener("submit", async (e) => {
     try {
       await sendInvest(amount, actualGoldPrice);
       investBtn.disabled = false;
+      amountInput.value = "";
     } catch (error) {
       console.log(error);
     }
