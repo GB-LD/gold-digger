@@ -3,7 +3,7 @@ import { sendPublicFiles } from "./utils/sendPublicFiles.js";
 import handleGoldPrice from "./handlers/handleGoldPrice.js";
 import handleInvestRequest from "./handlers/handleInvestRequest.js";
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 const __dirname = import.meta.dirname;
 
 const apiRoutesGetReq = {
